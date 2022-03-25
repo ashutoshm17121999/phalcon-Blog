@@ -13,8 +13,15 @@ class DashboardController extends Controller
     }
     public function statusAction()
     {
-        if ($this->request->getPost()) {
+
+        if ($this->request->getPost('change')) {
             $id = $this->request->getPost('id');
+            $val = $this->request->getPost('change');
+            // if($val){
+
+            // }
+            // echo $val;
+            // die();
             $user = Users::findFirst(array(
                 'id = :id:', 'bind' => array(
                     'id' => $id
@@ -35,7 +42,7 @@ class DashboardController extends Controller
             // echo 'ashusaushuahsua';
             // die();
         }
-        if ($this->request->getPost()) {
+        if ($this->request->getPost('delete')) {
             $id = $this->request->getPost('id');
             $user = Users::findFirst(array(
                 'id = :id:', 'bind' => array(

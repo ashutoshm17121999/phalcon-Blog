@@ -124,14 +124,14 @@ global $settings;
                              <?php
                             //var_dump($data)[0];
                             foreach ($users as $k => $v) {
-                                echo '<form method="POST" action="status">
+                                echo '<form method="POST" action="/dashboard/status">
                                 <tr><td>' . $v->firstname . '</td>
                                 <td>' . $v->lastname . '</td>
                                 <td>' . $v->email . '</td>
                                 <td>' . $v->password . '</td>
                                 <td>' . $v->role . '</td>
                                 <td>' . $v->status . '</td>
-                                <td><input type="hidden" name="status" value="' . $v->status . '"><input type="hidden" name="id" value="' . $v->id . '"><button type="submit" name="change" >Change</button><button type="submit" name="delete" >Delete</button></td></tr></form>';
+                                <td><input type="hidden" name="status" value="' . $v->status . '"><input type="hidden" name="id" value="' . $v->id . '"><button type="submit" value="change" name="change" >Change</button><button type="submit" value="delete" name="delete" >Delete</button></td></tr></form>';
                             }
 
 
